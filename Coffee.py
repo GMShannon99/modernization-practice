@@ -40,6 +40,7 @@ print("\nOk, let's get started. Have fun!")
 
 # The main game loop
 running = True
+force_exit = 'N'
 while running:
     # Display the day and add a "fancy" text effect
     print("\n-----| Day " + str(day) + " @ " + shop_name + "|-----")
@@ -60,6 +61,7 @@ while running:
     advertising = input("How much do you want to spend on advertising (0 for none)? ")
 
 
+
     # Convert advertising into a float
     # If it fails, assign it to zero
     try:
@@ -77,4 +79,11 @@ while running:
 
     # Before we loop around, add a day
     day += 1
+
+        # Force exit
+    force_exit = input("Do you want to force exit the game? (Y/N): ")
+    if force_exit=='Y':
+        running = False
+        print("Thanks for playing! Goodbye.")
+        continue
     
