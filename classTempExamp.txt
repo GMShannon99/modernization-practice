@@ -1,0 +1,17 @@
+import math
+
+temperatures = [22.5, 23.1, 22.8, float("nan"), 23.0]
+count = 0
+sum_temperature = 0
+
+for temperature in temperatures:
+    if not math.isnan(temperature):
+        count += 1
+        sum_temperature += temperature
+        print(f"Count: {count},Temperature: {temperature}")
+
+if count > 0:
+    average = sum_temperature / count
+    print(f"Count: {count},Average temperature: {average:.2f}")
+else:
+    print("No valid temperatures")

@@ -1,0 +1,9 @@
+def make_lemonade(sugar_grams: int, water_liters: int) -> int:
+    if(water_liters == 0):
+        return float("nan")
+               
+    sugar_cups = sugar_grams // 100
+    water_cups = int(water_liters * 2)
+    return min(sugar_cups, water_cups)
+
+print("Cups of coffee made: " + str(make_lemonade(500, 2)))

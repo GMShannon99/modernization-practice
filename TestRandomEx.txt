@@ -1,0 +1,17 @@
+import random
+
+party_themes = ["Pirate", "Sci-Fi", "Superhero", "Hollywood"]
+dessert_bringers = ["Alice", "Bob", "Charlie", "Dana"]
+
+theme = random.choice(party_themes)
+print(f"The party theme is: {theme}")
+
+dessert_bringer = random.choice(dessert_bringers)
+print(f"{dessert_bringer} will bring a dessert.")
+
+game_number = random.randint(1, 5)
+print(f"We will start with game number: {game_number}")
+
+volume_level = random.random()  # Generates float from 0 to 1.
+adjusted_volume = volume_level * 100 
+print(f"Set the volume to: {adjusted_volume:.2f}%")
